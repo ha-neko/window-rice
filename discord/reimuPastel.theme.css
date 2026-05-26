@@ -1,0 +1,119 @@
+/**
+ * @name ReimuWarmPlus
+ * @description Reimu-inspired theme (Warm Shrines Browns, Gold, and Deep Amulet Red) based on DiscordPlus, perfectly matched with terminal aesthetics.
+ * @author Gemini
+ * @version 1.4.0 (Warm Hakurei Shrine Palette, JetBrains Mono)
+ * @source Custom Reimu Warm Palette / JetBrains Mono
+ * @updateUrl https://raw.githubusercontent.com/user/reimu-warm-plus.theme.css
+*/
+
+/* --- 0. IMPORTS --- */
+
+/* 1. CRUCIAL: Import the DiscordPlus Core Source */
+@import url('https://plusinsta.github.io/discord-plus/src/DiscordPlus-source.theme.css');
+
+/* 2. FONT: Import JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+
+/* * --- 1. DISCORDPLUS VARIABLE OVERRIDES (Reimu Warm HSL Map) ---
+ * Converted from the terminal JSON colors to match the look.
+ */
+.theme-dark {
+    /* *** YOUR BACKGROUND IMAGE APPLIED HERE *** */
+    --dplus-backdrop: url('https://i.imgur.com/6vLzusv.jpeg');
+
+    /* Accent colors (Deep Amulet Red - #8A2522) */
+    --dplus-accent-color-hue: 2;
+    --dplus-accent-color-saturation: 57%;
+    --dplus-accent-color-lightness: 34%;
+
+    /* Foreground / Links Colors (Subtext Gold / Highlight - #D4A373) */
+    --dplus-foreground-color-hue-base: 38;
+    --dplus-foreground-color-hue-links: 38;
+    --dplus-foreground-color-saturation-amount: 0.9;
+    --dplus-foreground-color-lightness-amount: 1.1;
+
+    /* Background Panel Tint Color (Deep Shrine Wood Brown - #2E211A) */
+    --dplus-background-color-hue: 21;
+    --dplus-background-color-saturation-amount: 0.27;
+    --dplus-background-color-lightness-amount: 0.65;
+    --dplus-background-color-alpha: 0.78;
+    /* Elegant frosted opacity */
+
+    /* Panel Blur for Frosted Glass Effect */
+    --dplus-blur-ui: 15px;
+    --dplus-app-blur: 15px;
+
+    /* Font Selection */
+    --dplus-font-ui: 'JetBrains Mono', monospace;
+    --dplus-font-body: 'JetBrains Mono', monospace;
+    --dplus-font-header: 'JetBrains Mono', monospace;
+
+    /* UI Spacing/Radius */
+    --dplus-radius-ui: 8px;
+    --dplus-radius-avatar: 50%;
+    --dplus-radius-server: 12px;
+    --dplus-spacing-ui: 14px;
+    --dplus-spacing-app: 14px;
+}
+
+/* * --- 2. GLOBAL FONT FALLBACK --- */
+* {
+    font-family: var(--dplus-font-ui) !important;
+}
+
+/*
+ * --- 3. CUSTOM AESTHETICS & FIXES ---
+ */
+
+/* Increase Username Font Size */
+.message-2o-sNF .header-2jRj03 .username-2oyO2Q {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+}
+
+/* Custom Button Styling (Deep Red Accent + Outline) */
+.customButton__39ec2 {
+    background: hsla(var(--dplus-accent-color-hue), var(--dplus-accent-color-saturation), var(--dplus-accent-color-lightness), 0.25) !important;
+    border: 1px solid hsl(var(--dplus-accent-color-hue), var(--dplus-accent-color-saturation), var(--dplus-accent-color-lightness)) !important;
+    color: white !important;
+}
+
+/* Accent Color hover selection */
+[class*="item"]:hover[class*="selected"]:hover {
+    background: hsl(var(--dplus-accent-color-hue), var(--dplus-accent-color-saturation), var(--dplus-accent-color-lightness)) !important;
+}
+
+/* Custom Title/Prompt Styling (The ~/ prefix) */
+.title_c38106 {
+    justify-content: left;
+    margin-left: 1rem;
+}
+
+.title__85643 div.defaultColor__4bd52 {
+    width: 0;
+    overflow: visible;
+    text-transform: lowercase;
+    word-spacing: -0.5rem;
+}
+
+.title__85643 div.defaultColor__4bd52::before {
+    color: #E9C46A !important;
+    /* Gold terminal color for the prompt prefix */
+    content: "~/";
+}
+
+/* Show More Button (Accent Color + Outline) */
+[class*="showMoreButton_"] {
+    background: hsla(var(--dplus-accent-color-hue), var(--dplus-accent-color-saturation), var(--dplus-accent-color-lightness), 0.25) !important;
+    border: 1px solid hsla(var(--dplus-accent-color-hue), var(--dplus-accent-color-saturation), var(--dplus-accent-color-lightness), 0.5) !important;
+    border-top: 0px;
+    color: white !important;
+}
+
+/* Radio Bar Styling */
+[class*="radioBar_"] {
+    background: hsla(var(--dplus-background-color-hue), 20%, 15%, 0.5) !important;
+    border: 1px solid hsl(var(--dplus-accent-color-hue), var(--dplus-accent-color-saturation), var(--dplus-accent-color-lightness)) !important;
+}
