@@ -8,11 +8,23 @@ A Windows desktop rice with a Hakurei Reimu (Touhou) aesthetic — warm reds, sh
 
 ## 🖼️ Showcase
 
-| | |
-|---|---|
-| ![Desktop](showcase/desktop.png) | ![Terminal](showcase/terminal.png) |
-| ![VS Code](showcase/vs.png) | ![Spicetify](showcase/spicetify.png) |
-| ![WinLauncher](showcase/winlauncher.png) | ![Browser](showcase/browser.png) |
+### Desktop
+![Desktop](showcase/desktop.png)
+
+### Terminal
+![Terminal](showcase/terminal.png)
+
+### VS Code
+![VS Code](showcase/vs.png)
+
+### Spicetify
+![Spicetify](showcase/spicetify.png)
+
+### WinLauncher
+![WinLauncher](showcase/winlauncher.png)
+
+### Browser
+![Browser](showcase/browser.png)
 
 ---
 
@@ -149,26 +161,21 @@ Install **JetBrains Mono Nerd Font Propo** from [nerdfonts.com](https://www.nerd
 
 ### Background & Sticker
 
-The screenshots use a custom background image and sticker overlay. Install the [Background extension](https://marketplace.visualstudio.com/items?itemName=shalldie.background) by shalldie, then point it to the assets in this repo:
+The background and sticker are configured through the Doki Theme extension's **Custom Doki Assets** settings — no extra extensions needed.
 
-```json
-"background.enabled": true,
-"background.useDefault": false,
-"background.customImages": ["file:///C:/path/to/window-rice/vscode/background.png"],
-"background.style": {
-  "opacity": 0.08
-},
-"background.useFront": true,
-"background.customImagesFront": ["file:///C:/path/to/window-rice/vscode/sticker.png"],
-"background.styleFront": {
-  "background-size": "200px",
-  "background-position": "bottom 20px right 20px",
-  "background-repeat": "no-repeat",
-  "opacity": 0.8
-}
-```
+1. Open VS Code Settings (`Ctrl+,`) → **Extensions** → **Custom Doki Assets**
+2. Set **Doki › Background: Path** to the absolute path of your background image (`vscode/reimuvs.png` from this repo)
+3. Set **Doki › Sticker: Path** to the absolute path of your sticker (`vscode/reimuneko.gif` from this repo)
+4. Set **Doki › Sticker: CSS** to position it — this is what mine uses:
+   ```
+   z-index:100;background-position:100% 98%;background-size: 250px
+   ```
+5. Set **Doki › Statusbar: Name** to show a custom name next to the ❤ in the status bar (mine is `reimu`)
+6. Open Command Palette (`Ctrl+Shift+P`) → **Doki: Install Assets** to apply
+7. Reload VS Code when prompted
 
-> Replace `C:/path/to/window-rice` with the actual path to where you cloned this repo.
+![Background path setting](vscode/background.png)
+![Sticker path setting](vscode/sticker.png)
 
 ---
 
