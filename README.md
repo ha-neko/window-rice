@@ -26,6 +26,8 @@ A Windows desktop rice with a Hakurei Reimu (Touhou) aesthetic — warm reds, sh
 ### Browser
 ![Browser](showcase/browser.png)
 
+### Discord
+![Discord](showcase/discord.png)
 ---
 
 ## 📁 What's Included
