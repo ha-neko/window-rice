@@ -1,106 +1,110 @@
+<div align="center">
+
 # 🏮 window-rice
 
-A Windows desktop rice with a Hakurei Reimu (Touhou) aesthetic — warm reds, shrine browns, and soft pastels across the entire system.
+*a windows desktop rice inspired by the hakurei shrine*
 
-> **Theme:** Reimu Warm — a cozy Japanese shrine palette with deep reds, warm tans, and soft off-whites.
+**warm reds · shrine browns · soft pastels**
+
+[![YASB](https://img.shields.io/badge/YASB-status%20bar-c94040?style=flat-square&logoColor=white)](https://github.com/amnweb/yasb)
+[![Spicetify](https://img.shields.io/badge/Spicetify-spotify-1db954?style=flat-square)](https://spicetify.app/)
+[![Vencord](https://img.shields.io/badge/Vencord-discord-5865F2?style=flat-square)](https://vencord.dev/)
+[![Discord](https://img.shields.io/badge/Discord-join%20server-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/s6Yg7uyrjX)
+
+</div>
 
 ---
 
-## 🖼️ Showcase
+## 🖼️ showcase
 
-### Desktop
+### desktop
 ![Desktop](showcase/desktop.png)
 
-### Terminal
+### terminal
 ![Terminal](showcase/terminal.png)
 
-### VS Code
+### vs code
 ![VS Code](showcase/vs.png)
 
-### Spicetify
+### spicetify
 ![Spicetify](showcase/spicetify.png)
 
-### WinLauncher
+### winlauncher
 ![WinLauncher](showcase/winlauncher.png)
 
-### Browser
+### browser
 ![Browser](showcase/browser.png)
 
-### Discord
+### discord
 ![Discord](showcase/discord.png)
+
 ---
 
-## 📁 What's Included
+## 📁 contents
 
-| Folder | Contents |
+| folder | what's inside |
 |---|---|
-| `yasb/` | Status bar config (`config.yaml`) and stylesheet (`styles.css`) |
-| `vscode/` | VS Code assets — background (`background.png`), sticker (`sticker.png`), preview shots |
-| `terminal/` | PowerShell profile, Fastfetch config, Oh My Posh themes, color schemes |
-| `discord/` | Vencord theme: `reimuPastel.theme.css` |
-| `spicetify/` | Spicetify theme (`text`) + marketplace extension settings |
-| `cursor/` | Hakurei Reimu pixel cursor set with installer |
-| `browser/` | Browser GIF asset |
-| `wallpaper/` | `reimu.jpg` wallpaper |
-| `showcase/` | Preview screenshots |
+| `yasb/` | status bar config & stylesheet |
+| `vscode/` | doki theme assets — background, sticker, previews |
+| `terminal/` | powershell profile, fastfetch config, oh my posh themes, color schemes |
+| `discord/` | vencord theme `reimuPastel.theme.css` |
+| `spicetify/` | spicetify `text` theme + marketplace extension settings |
+| `cursor/` | hakurei reimu pixel cursor set with installer |
+| `browser/` | browser gif asset |
+| `wallpaper/` | `reimu.jpg` |
+| `showcase/` | preview screenshots |
 
 ---
 
-## ✅ Requirements
+## ✅ requirements
 
-- [YASB](https://github.com/amnweb/yasb) — Windows status bar
-- [Cava](https://github.com/nicknisi/cava-windows) — audio visualizer (for YASB cava widget)
-- [WinLaunch](https://winlaunch.org/) — macOS-style app launcher
-- [VS Code](https://code.visualstudio.com/) + [Doki Theme extension](https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme)
-- [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads) — used in terminal and bar
-- [Oh My Posh](https://ohmyposh.dev/) — PowerShell prompt styling
-- [Fastfetch](https://github.com/fastfetch-cli/fastfetch) — system info fetcher
-- [Vencord](https://vencord.dev/) — Discord client mod
-- [Spicetify](https://spicetify.app/) — Spotify client mod
-- [Windows Terminal](https://aka.ms/terminal)
+| tool | purpose |
+|---|---|
+| [YASB](https://github.com/amnweb/yasb) | windows status bar |
+| [Cava](https://github.com/nicknisi/cava-windows) | audio visualizer widget |
+| [WinLaunch](https://winlaunch.org/) | macos-style app launcher |
+| [VS Code](https://code.visualstudio.com/) + [Doki Theme](https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme) | editor + theme |
+| [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads) | font for terminal & bar |
+| [Oh My Posh](https://ohmyposh.dev/) | powershell prompt |
+| [Fastfetch](https://github.com/fastfetch-cli/fastfetch) | system info fetcher |
+| [Vencord](https://vencord.dev/) | discord client mod |
+| [Spicetify](https://spicetify.app/) | spotify client mod |
+| [Windows Terminal](https://aka.ms/terminal) | terminal |
 
 ---
 
-## 🪟 YASB — Status Bar
+## 🪟 yasb — status bar
 
-YASB is the top status bar. It shows clock, media, taskbar, CPU/RAM/disk, weather, volume, and notifications — plus a live audio visualizer via the Cava widget.
+the top bar showing clock, media, taskbar, cpu/ram/disk, weather, volume, notifications, and a live cava visualizer.
 
-### Install YASB
+**install**
 
 ```powershell
 winget install AmN.yasb
 ```
 
-Or download from the [releases page](https://github.com/amnweb/yasb/releases).
+or grab it from the [releases page](https://github.com/amnweb/yasb/releases).
 
-### Apply Config
-
-Copy the files from the `yasb/` folder to your YASB config directory:
+**apply config**
 
 ```powershell
 Copy-Item .\yasb\config.yaml $env:USERPROFILE\.config\yasb\config.yaml
 Copy-Item .\yasb\styles.css  $env:USERPROFILE\.config\yasb\styles.css
 ```
 
-Then restart YASB (right-click tray icon → Restart).
+restart yasb via the tray icon → **Restart**.
 
-**Widgets included:** `home`, `quick_launch`, `clock` (id_ID locale), `media`, `cava`, `systray`, `taskbar`, `traffic`, `weather`, `cpu`, `memory`, `disk`, `volume`, `notifications`, `power_menu`.
-
-> ⚠️ The clock uses `id_ID` locale (Indonesian). Change `locale: "id_ID"` in `config.yaml` to your own locale if needed (e.g. `en_US`).
+> ⚠️ the clock uses `id_ID` locale (indonesian). change `locale: "id_ID"` in `config.yaml` to your own if needed — e.g. `en_US`.
 
 ---
 
-## 🎵 Cava — Audio Visualizer
+## 〰️ cava — audio visualizer
 
-Cava is the animated audio bar that sits in the YASB status bar. It visualizes your system audio in real time.
+the mirrored bar animation inside yasb that reacts to system audio.
 
-### Install Cava
+**install** — download the windows build from [cava-windows releases](https://github.com/nicknisi/cava-windows/releases) and put the `.exe` somewhere permanent.
 
-Download the Windows build from the [cava-windows releases](https://github.com/nicknisi/cava-windows/releases) and put the executable somewhere permanent (e.g. `C:\tools\cava.exe`).
-
-### Configuration
-
-Cava is configured directly inside `yasb/config.yaml` under the `cava` widget — no separate config file needed. Current settings:
+cava is configured directly in `yasb/config.yaml` — no separate file needed:
 
 ```yaml
 cava:
@@ -118,42 +122,39 @@ cava:
   gradient_color_3: '#ffffff'
 ```
 
-> ⚠️ YASB needs to know where `cava.exe` lives. If the widget shows nothing, set the path in YASB's settings or ensure `cava` is on your system `PATH`.
+> ⚠️ make sure `cava` is on your system `PATH`, or configure the executable path in yasb's settings.
 
 ---
 
-## 🚀 WinLaunch — App Launcher
+## 🚀 winlaunch — app launcher
 
-WinLaunch is a standalone macOS Launchpad-style app launcher — separate from YASB. It gives you a fullscreen overlay to organize and launch all your apps.
+a standalone macos launchpad-style app launcher. separate from yasb.
 
-### Install
+**install** — download from [winlaunch.org](https://winlaunch.org/) and run the installer.
 
-Download from [winlaunch.org](https://winlaunch.org/) and run the installer.
+**setup**
 
-### Setup
+1. launch winlaunch — it sits in the system tray
+2. open it with the hotkey (default `F1`) to get the fullscreen overlay
+3. drag and drop `.exe` shortcuts to add apps, or right-click → **Add App**
+4. drag one app onto another to create folders
+5. right-click the overlay → **Settings** to tweak size, blur, animations, and theme
 
-1. Launch WinLaunch — it sits in the system tray
-2. Press the configured hotkey (default: `F1` or swipe gesture) to open the launcher overlay
-3. **Add apps:** drag and drop `.exe` shortcuts or use right-click → Add App
-4. **Create folders:** drag one app onto another to group them
-5. **Customize appearance:** right-click the overlay → Settings → adjust size, animation, background blur, and theme
-
-> The `showcase/winlauncher.png` shows how mine looks. Arrange your apps however you like — there's no config file to copy for this one.
+> see `showcase/winlauncher.png` for reference — arrangement is up to you, no config to copy.
 
 ---
 
-## 💻 VS Code
+## 💻 vs code
 
-### Install Doki Theme
+**install doki theme**
 
-1. Open VS Code
-2. Go to Extensions (`Ctrl+Shift+X`)
-3. Search for **Doki Theme** by unthrottled and install it
-4. Open Command Palette (`Ctrl+Shift+P`) → `Preferences: Color Theme` → select **Doki Theme: Rias Gremory**
+1. open extensions `Ctrl+Shift+X`
+2. search **Doki Theme** by unthrottled → install
+3. `Ctrl+Shift+P` → `Preferences: Color Theme` → **Doki Theme: Rias Gremory**
 
-### Font Setup
+**font**
 
-Install **JetBrains Mono Nerd Font Propo** from [nerdfonts.com](https://www.nerdfonts.com/font-downloads), then add to VS Code `settings.json`:
+install [JetBrainsMono NFP](https://www.nerdfonts.com/font-downloads) then add to `settings.json`:
 
 ```json
 "editor.fontFamily": "JetBrainsMono NFP, JetBrains Mono, monospace",
@@ -161,37 +162,30 @@ Install **JetBrains Mono Nerd Font Propo** from [nerdfonts.com](https://www.nerd
 "editor.fontLigatures": true
 ```
 
-### Background & Sticker
+**background & sticker**
 
-The background and sticker are configured through the Doki Theme extension's **Custom Doki Assets** settings — no extra extensions needed.
+configured through doki theme's **Custom Doki Assets** — no extra extensions needed.
 
-1. Open VS Code Settings (`Ctrl+,`) → **Extensions** → **Custom Doki Assets**
-2. Set **Doki › Background: Path** to the absolute path of your background image (`vscode/reimuvs.png` from this repo)
-3. Set **Doki › Sticker: Path** to the absolute path of your sticker (`vscode/reimuneko.gif` from this repo)
-4. Set **Doki › Sticker: CSS** to position it — this is what mine uses:
+1. open settings `Ctrl+,` → **Extensions** → **Custom Doki Assets**
+2. set **Doki › Background: Path** → absolute path to `vscode/reimuvs.png`
+3. set **Doki › Sticker: Path** → absolute path to `vscode/reimuneko.gif`
+4. set **Doki › Sticker: CSS**:
    ```
    z-index:100;background-position:100% 98%;background-size: 250px
    ```
-5. Set **Doki › Statusbar: Name** to show a custom name next to the ❤ in the status bar (mine is `reimu`)
-6. Open Command Palette (`Ctrl+Shift+P`) → **Doki: Install Assets** to apply
-7. Reload VS Code when prompted
+5. set **Doki › Statusbar: Name** → `reimu`
+6. `Ctrl+Shift+P` → **Doki: Install Assets** → reload when prompted
 
 ![Background path setting](vscode/background.png)
 ![Sticker path setting](vscode/sticker.png)
 
 ---
 
-## 🖥️ Terminal Setup
+## 🖥️ terminal
 
-The terminal uses **Windows Terminal** with a custom PowerShell profile powered by:
+windows terminal + powershell with fastfetch on startup, oh my posh prompt, and modern cli tools.
 
-- **Fastfetch** — system info on shell startup
-- **Oh My Posh** — custom `reimu_warm` prompt theme
-- **Zoxide** — smarter `cd`
-- **Eza** — modern `ls` with icons
-- **Bat** — syntax-highlighted `cat`
-
-### 1. Install Dependencies
+**1. install tools**
 
 ```powershell
 winget install JanDeDobbeleer.OhMyPosh
@@ -201,9 +195,9 @@ winget install sharkdp.bat
 winget install fastfetch-cli.fastfetch
 ```
 
-### 2. Install JetBrains Mono Nerd Font
+**2. font**
 
-Download **JetBrainsMono NFP** from [nerdfonts.com](https://www.nerdfonts.com/font-downloads), install it, then set it as your Windows Terminal font in `settings.json`:
+install [JetBrainsMono NFP](https://www.nerdfonts.com/font-downloads) then set it in windows terminal `settings.json`:
 
 ```json
 "font": {
@@ -212,53 +206,48 @@ Download **JetBrainsMono NFP** from [nerdfonts.com](https://www.nerdfonts.com/fo
 }
 ```
 
-### 3. Apply Color Scheme
+**3. color schemes**
 
-Open Windows Terminal Settings → Open JSON file and paste the contents of `terminal/color scheme.txt` into the `"schemes"` array. Included schemes:
+open windows terminal settings → open JSON file → paste the contents of `terminal/color scheme.txt` into the `"schemes"` array.
 
-| Name | Vibe |
+| scheme | vibe |
 |---|---|
-| **Hakurei Autumn** | Warm dark browns, muted reds |
-| **Hakurei Reimu** | Deep purple-blue, red & gold |
-| **Reimu Hakurei** | Dark violet, crimson red |
-| **Reimu Warm Autumn** | Rich warm browns, off-white text |
-| **Rosé Pine** | Muted rose, lavender |
-| **Soft Pink Rice** | Catppuccin-based soft pinks |
+| **Hakurei Autumn** | warm dark browns, muted reds |
+| **Hakurei Reimu** | deep purple-blue, red & gold |
+| **Reimu Hakurei** | dark violet, crimson red |
+| **Reimu Warm Autumn** | rich warm browns, off-white text |
+| **Rosé Pine** | muted rose, lavender |
+| **Soft Pink Rice** | catppuccin-based soft pinks |
 
-Then set your preferred scheme on your PowerShell profile:
+set your scheme in the powershell profile entry:
 
 ```json
 "colorScheme": "Reimu Warm Autumn"
 ```
 
-### 4. Apply PowerShell Profile & Fastfetch
+**4. powershell profile & fastfetch**
 
 ```powershell
-# Copy Oh My Posh themes
 Copy-Item .\terminal\omposh_themes\ $env:USERPROFILE\omposh_themes\ -Recurse
-
-# Copy Fastfetch config
 Copy-Item .\terminal\fastfetch\ $env:USERPROFILE\.config\fastfetch\ -Recurse
-
-# Copy startup profile — edit paths inside before applying!
 Copy-Item .\terminal\startup.ps1 $PROFILE
 ```
 
-> ⚠️ **Edit `startup.ps1` before copying!** It has hardcoded paths — update these two lines to match where you installed things:
+> ⚠️ edit `startup.ps1` before copying — update these hardcoded paths to match your setup:
 
 ```powershell
-& "D:\codingan\fastfetch.exe"                        # → your fastfetch.exe path
-$env:POSH_THEMES_PATH = "D:\codingan\omposh_themes\" # → your themes folder path
+& "D:\codingan\fastfetch.exe"                         # → your fastfetch.exe path
+$env:POSH_THEMES_PATH = "D:\codingan\omposh_themes\"  # → your themes folder
 ```
 
-Also fix the Reimu logo path in `terminal/fastfetch/config.jsonc`:
+also update the reimu logo path in `terminal/fastfetch/config.jsonc`:
 
 ```json
 "source": "C:/Users/Sakuntala/.config/fastfetch/reimu.txt"
-// Change "Sakuntala" to your actual Windows username
+// change "Sakuntala" to your windows username
 ```
 
-### 5. Reload
+**5. reload**
 
 ```powershell
 . $PROFILE
@@ -266,52 +255,42 @@ Also fix the Reimu logo path in `terminal/fastfetch/config.jsonc`:
 
 ---
 
-## 🖱️ Cursor
+## 🖱️ cursor
 
-A custom Hakurei Reimu pixel cursor set is included in `cursor/Hakurei Reimus Pixel Cursors ani/`.
+hakurei reimu pixel cursor set, included in `cursor/Hakurei Reimus Pixel Cursors ani/`.
 
-### Install
-
-1. Open the `cursor/Hakurei Reimus Pixel Cursors ani/` folder
-2. Right-click `install.inf` → **Install**
-3. Go to Windows Settings → Bluetooth & devices → Mouse → Additional mouse settings → **Pointers** tab
-4. Under **Scheme**, select **Hakurei Reimus Pixel Cursors** from the dropdown
-5. Click **Apply**
+1. open the `cursor/Hakurei Reimus Pixel Cursors ani/` folder
+2. right-click `install.inf` → **Install**
+3. windows settings → bluetooth & devices → mouse → additional mouse settings → **Pointers** tab
+4. under **Scheme** select **Hakurei Reimus Pixel Cursors**
+5. click **Apply**
 
 ---
 
-## 🎮 Discord — Vencord
+## 🎮 discord — vencord
 
-### Install Vencord
+**install vencord** — follow the [vencord install guide](https://vencord.dev/install/).
 
-Follow the [Vencord install guide](https://vencord.dev/install/).
+**apply theme**
 
-### Apply Theme
+1. discord → user settings → **Vencord → Themes → Local Themes** → open folder
+2. copy `discord/reimuPastel.theme.css` into the folder
+3. back in vencord settings, enable **ReimuWarmPlus**
 
-1. In Discord, go to **User Settings → Vencord → Themes**
-2. Click **Local Themes** and open the folder
-3. Copy `discord/reimuPastel.theme.css` into that folder
-4. Back in Vencord settings, enable **ReimuWarmPlus**
-
-The theme applies a warm shrine-brown palette with JetBrains Mono font across Discord's UI, built on top of [DiscordPlus](https://github.com/plusinsta/discord-plus).
+built on [DiscordPlus](https://github.com/plusinsta/discord-plus) with a warm shrine-brown palette and JetBrains Mono.
 
 ---
 
-## 🎵 Spicetify — Spotify
+## 🎵 spicetify — spotify
 
-### Install Spicetify
+**install**
 
 ```powershell
 iwr -useb https://raw.githubusercontent.com/spicetify/cli/main/install.ps1 | iex
-```
-
-Then install Spicetify Marketplace:
-
-```powershell
 iwr -useb https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.ps1 | iex
 ```
 
-### Apply Theme
+**apply theme**
 
 ```powershell
 $themePath = "$env:USERPROFILE\AppData\Local\spicetify\Themes\text"
@@ -323,43 +302,49 @@ spicetify config current_theme text color_scheme Spicetify
 spicetify apply
 ```
 
-### Marketplace Extensions
+**marketplace extensions**
 
-Go to **Marketplace → Settings → Import** and load `spicetify/marketplace-settings-2026-05-26T15_06_26.763Z.json`.
+go to **Marketplace → Settings → Import** and load `spicetify/marketplace-settings-2026-05-26T15_06_26.763Z.json`.
 
-Installed extensions:
-- **adblockify** — blocks Spotify ads
-- **Custom Controls** — replaces the titlebar
-- **No Controls** — removes the titlebar (toggle with `F8`)
-- **Full Screen** — fancy album art fullscreen view
-
----
-
-## 🖼️ Wallpaper
-
-Right-click `wallpaper/reimu.jpg` → **Set as desktop background**, or set it via Windows Settings → Personalization → Background.
+| extension | purpose |
+|---|---|
+| adblockify | blocks spotify ads |
+| Custom Controls | replaces the titlebar |
+| No Controls | removes the titlebar (`F8` to toggle) |
+| Full Screen | fancy album art fullscreen view |
 
 ---
 
-## 🗂️ Quick Checklist
+## 🖼️ wallpaper
 
-- [ ] YASB installed and config/styles copied to `~/.config/yasb/`
-- [ ] Cava installed and on PATH (or path configured in YASB)
-- [ ] WinLaunch installed and apps organized
-- [ ] JetBrains Mono Nerd Font installed
-- [ ] VS Code Doki Theme installed, color theme set to **Rias Gremory**
-- [ ] VS Code Background extension configured with `vscode/background.png` and `vscode/sticker.png`
-- [ ] Windows Terminal color scheme added and selected
+right-click `wallpaper/reimu.jpg` → **Set as desktop background**,
+or windows settings → personalization → background.
+
+---
+
+## 🗂️ checklist
+
+- [ ] yasb installed, config & styles copied to `~/.config/yasb/`
+- [ ] cava installed and on `PATH`
+- [ ] winlaunch installed and apps arranged
+- [ ] jetbrains mono nerd font installed
+- [ ] vs code doki theme installed, color theme set to **rias gremory**
+- [ ] doki custom assets configured (background + sticker paths set, assets installed)
+- [ ] windows terminal color scheme added and selected
 - [ ] `startup.ps1` paths updated and copied to `$PROFILE`
-- [ ] Fastfetch config path updated with your username
-- [ ] Oh My Posh themes copied to your themes folder
-- [ ] Cursor scheme installed via `install.inf`
-- [ ] Vencord installed and `reimuPastel.theme.css` added
-- [ ] Spicetify `text` theme applied and marketplace extensions imported
-- [ ] Wallpaper set
+- [ ] fastfetch config username updated
+- [ ] oh my posh themes copied
+- [ ] cursor scheme installed via `install.inf`
+- [ ] vencord installed, `reimuPastel.theme.css` enabled
+- [ ] spicetify `text` theme applied, marketplace extensions imported
+- [ ] wallpaper set
 
 ---
 
 <div align="center">
-  <sub>✨ gensokyo on windows ✨</sub>
+
+*made with love for gensokyo*
+
+[![Discord](https://img.shields.io/badge/discord-join%20us-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/s6Yg7uyrjX)
+
 </div>
